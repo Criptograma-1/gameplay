@@ -1,24 +1,30 @@
-import React from "react";
-import { Alert, Share, Platform, ImageBackground, Text, View, FlatList } from "react-native";
+import React, { useEffect, useState } from "react";
+import {
+  Alert,
+  Share,
+  Platform,
+  ImageBackground,
+  Text,
+  View,
+  FlatList
+} from "react-native";
 import { BorderlessButton } from "react-native-gesture-handler";
+import { useRoute } from "@react-navigation/native";
 import { Fontisto } from "@expo/vector-icons";
 import * as Linking from 'expo-linking';
 
 import { Background } from "../../components/background";
 import { ListHeader } from "../../components/ListHeader";
-import { Header } from "../../components/Header";
-import { theme } from "../../global/styles/theme";
-import { styles } from "./styles";
-import BannerImg from "../../assets/banner.png";
 import { Member, MemberProps } from "../../components/Member";
 import { ListDivider } from "../../components/ListDivider";
 import { ButtonIcon } from "../../components/buttonicon";
-import { useRoute } from "@react-navigation/native";
-import { AppointmentProps } from "../../components/Appointment";
-import { api } from "../../services/api";
-import { useState } from "react";
-import { useEffect } from "react";
+import { Header } from "../../components/Header";
 import { Load } from "../../components/Load";
+import { AppointmentProps } from "../../components/Appointment";
+import { theme } from "../../global/styles/theme";
+import BannerImg from "../../assets/banner.png";
+import { styles } from "./styles";
+import { api } from "../../services/api";
 
 type Params = {
   guildSelected: AppointmentProps
@@ -30,6 +36,7 @@ type GuildWidget = {
   instant_invite: string;
   members: MemberProps[];
 }
+
 export function AppointmentDetails() {
   const [Widget, setWidget] = useState<GuildWidget>({} as GuildWidget);
   const [loading, setLoading] = useState(true);
@@ -64,9 +71,11 @@ export function AppointmentDetails() {
   function handleOpenGuild() {
     Linking.openURL(Widget.instant_invite);
   }
+
   useEffect(() => {
     fetchGuildWidget();
   })
+
   return (
     <Background>
       <Header
@@ -91,6 +100,7 @@ export function AppointmentDetails() {
           <Text style={styles.title}>
             {guildSelected.guild.name}
           </Text>
+
           <Text style={styles.subtitle}>
             {guildSelected.description}
           </Text>
@@ -103,6 +113,7 @@ export function AppointmentDetails() {
             title="Jogadores"
             subtitle={`Total ${Widget.members.length}`}
           />
+
           <FlatList
             data={Widget.members}
             keyExtractor={item => item.id}

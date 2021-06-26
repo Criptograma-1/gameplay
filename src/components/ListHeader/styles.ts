@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native';
-import { then } from '../../../metro.config';
 import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
@@ -10,11 +9,13 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 24,
     marginTop: 27,
   },
+
   title: {
     fontFamily: theme.fonts.title700,
     color: theme.colors.highlight,
     fontSize: 18
   },
+
   subtitle: {
     fontFamily: theme.fonts.text400,
     color: theme.colors.highlight,

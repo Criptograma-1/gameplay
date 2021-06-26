@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { theme } from "../../global/styles/theme";
 
-export const style = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     width: 104,
     height: 120,
@@ -9,8 +9,8 @@ export const style = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 8,
     margin: 8,
-
   },
+
   content: {
     width: 100,
     height: 116,
@@ -19,6 +19,7 @@ export const style = StyleSheet.create({
     justifyContent: 'space-between',
     paddingVertical: 20
   },
+
   checked: {
     position: 'absolute',
     top: 7,
@@ -28,6 +29,7 @@ export const style = StyleSheet.create({
     backgroundColor: theme.colors.primary,
     borderRadius: 3
   },
+
   check: {
     position: 'absolute',
     top: 7,
@@ -39,6 +41,7 @@ export const style = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 3
   },
+
   title: {
     fontFamily: theme.fonts.title700,
     color: theme.colors.heading,

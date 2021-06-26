@@ -11,9 +11,11 @@ export type MemberProps = {
   avatar_url: string;
   status: string;
 }
+
 type Props = {
   data: MemberProps;
 }
+
 export function Member({ data }: Props) {
   const { on, primary } = theme.colors;
   const isOnline = data.status === 'online';
@@ -21,23 +23,21 @@ export function Member({ data }: Props) {
   return (
     <View style={styles.container}>
       <Avatar urlImage={data.avatar_url} />
+
       <View>
         <Text style={styles.title}>
           {data.username}
         </Text>
+
         <View style={styles.status}>
           <View style={[
             styles.bulletStatus,
-            {
-              backgroundColor: isOnline ? on : primary
-            }
+            { backgroundColor: isOnline ? on : primary }
           ]} />
 
           <Text style={styles.nameStatus}>
             {isOnline ? 'Disponível' : 'Ocupado'}
           </Text>
-
-
         </View>
       </View>
     </View>

@@ -1,8 +1,12 @@
 import React from "react";
 import { ReactNode } from "react";
-import { Text, View, Modal, ModalProps, TouchableWithoutFeedback } from "react-native";
+import {
+  View,
+  Modal,
+  ModalProps,
+  TouchableWithoutFeedback
+} from "react-native";
 
-import { theme } from "../../global/styles/theme";
 import { styles } from "./styles";
 import { Background } from '../background'
 
@@ -10,7 +14,9 @@ type Props = ModalProps & {
   children: ReactNode;
   closeModal: () => void;
 }
+
 export function ModalView({ children, closeModal, ...rest }: Props) {
+
   return (
     <Modal
       transparent

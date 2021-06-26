@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+
   title: {
     flex: 1,
     textAlign: 'center',

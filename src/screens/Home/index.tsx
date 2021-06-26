@@ -9,11 +9,10 @@ import { Profile } from "../../components/Profile";
 import { Appointment, AppointmentProps } from "../../components/Appointment";
 import { ListHeader } from "../../components/ListHeader";
 import { ListDivider } from "../../components/ListDivider";
-import { styles } from "./styles";
+import { Load } from "../../components/Load";
 import { Background } from "../../components/background";
 import { COLLECTION_APPOINTMENTS } from "../../Config/database";
-import { Load } from "../../components/Load";
-
+import { styles } from "./styles";
 
 export function Home() {
   const [category, setCategory] = useState('');
@@ -29,6 +28,7 @@ export function Home() {
   function handleAppointmentDetails(guildSelected: AppointmentProps) {
     navigation.navigate('AppointmentDetails', { guildSelected });
   }
+
   function handleAppointmentCreate() {
     navigation.navigate('AppointmentCreate');
   }
@@ -54,21 +54,21 @@ export function Home() {
     <Background>
       <View style={styles.header}>
         <Profile />
+
         <ButtonAdd onPress={handleAppointmentCreate} />
       </View>
+
       <CategorySelect
         categorySelected={category}
         setCategory={handleCategorySelect}
       />
-
       {
         loading ? <Load /> :
           <>
             <ListHeader
               title="Partidas agendadas"
-              subtitle={`Total ${appointments.length}`} />
-
-
+              subtitle={`Total ${appointments.length}`}
+            />
 
             <FlatList
               data={appointments}

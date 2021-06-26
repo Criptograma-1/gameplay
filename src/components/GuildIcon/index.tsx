@@ -10,18 +10,20 @@ type Props = {
   guildId: string;
   iconId: string | null;
 }
+
 export function GuildIcon({ guildId, iconId }: Props) {
   const uri = `${CDN_IMAGE}/icon/${guildId}/${iconId}.png`;
 
   return (
     <View style={styles.container}>
-      {iconId ?
-        <Image
-          source={{ uri }}
-          style={styles.image}
-          resizeMode="cover" />
-        :
-        <DiscordSVG width={40} height={40} />
+      {
+        iconId ?
+          <Image
+            source={{ uri }}
+            style={styles.image}
+            resizeMode="cover" />
+          :
+          <DiscordSVG width={40} height={40} />
       }
     </View>
   );

@@ -8,6 +8,5 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colors.secondary50,
     alignSelf: 'flex-end'
   }
-}
-);
+});
 
