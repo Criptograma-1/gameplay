@@ -60,7 +60,7 @@ O layout da aplicação está disponível no Figma:
 ```bash
 
 # Clone este repositório
-$ git clone git@github.com:Criptograma-1/plantmanager.git
+$ git clone git@github.com:Criptograma-1/gameplay.git
 
 # Instale as dependências
 $ yarn install
