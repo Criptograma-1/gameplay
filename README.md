@@ -30,7 +30,7 @@ Crie grupos para jogar seus games favoritos com seus amigos com esse App que pos
 Projeto desenvolvido durante a **NLW - Next Level Week #6** oferecida pela [Rocketseat](https://blog.rocketseat.com.br/primeira-next-level-week/).
 O NLW é uma experiência online com muito conteúdo prático, desafios e hacks onde o conteúdo fica disponível durante uma semana.
 
----
+
 
 ## ⚙️ Funcionalidades
 
@@ -45,7 +45,7 @@ O NLW é uma experiência online com muito conteúdo prático, desafios e hacks 
 - [x] Exibe se a partida foi agendada em um servidor próprio (anfitrião) ou em servidores de outros (convidado)
 - [x] Disponibiliza a função de Logout
 
----
+
 
 ## 🎨 Layout
 
@@ -109,12 +109,10 @@ As seguintes ferramentas foram usadas na construção do projeto:
  [![Linkedin Badge](https://img.shields.io/badge/-Andresa-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andresa-cristina/)](https://www.linkedin.com/in/andresa-cristina/) 
 [![Gmail Badge](https://img.shields.io/badge/-andresa.info@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:andresa.info@gmail.com)](mailto:andresa.info@gmail.com)
 
----
+
 
 ## 📝 Licença
 
 Este projeto esta sobe a licença [MIT](./LICENSE).
 
 Feito com ❤️ por Criptograma 👋🏽 [Entre em contato!](https://www.linkedin.com/in/andresa-cristina/)
-
----
